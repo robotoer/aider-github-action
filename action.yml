@@ -55,9 +55,7 @@ runs:
     FEATURE_REF: ${{ inputs.branch }}
     MODEL: ${{ inputs.model }}
   args:
-    - --model
-    - ${{ inputs.model }}
-    - ${{ inputs.aider_args }}
+    - --model ${{ inputs.model }} ${{ inputs.aider_args }}
 branding:
   icon: "cpu"
   color: "white"
