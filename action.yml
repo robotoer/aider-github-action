@@ -31,7 +31,7 @@ inputs:
     required: false
   model:
     description: "Model to use for Aider"
-    default: "gpt-4-1106-preview"
+    default: "gpt-4o"
     required: false
   branch:
     description: "Branch to run Aider on"
