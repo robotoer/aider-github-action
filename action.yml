@@ -33,10 +33,6 @@ inputs:
     description: "Model to use for Aider"
     default: "gpt-4o"
     required: false
-  branch:
-    description: "Branch to run Aider on"
-    default: "main"
-    required: false
   aider_args:
     description: "Space-delimited args to pass to aider (e.g. --yes --message 'Make the dashboard sidebar purple')"
     required: true
@@ -52,7 +48,6 @@ runs:
     COHERE_API_KEY: ${{ inputs.cohere_api_key }}
     DEEPSEEK_API_KEY: ${{ inputs.deepseek_api_key }}
     OPENROUTER_API_KEY: ${{ inputs.openrouter_api_key }}
-    FEATURE_REF: ${{ inputs.branch }}
     MODEL: ${{ inputs.model }}
   args:
     - --model ${{ inputs.model }} ${{ inputs.aider_args }}
